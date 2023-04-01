@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        cursor: pointer;
+ padding: 17px 40px;
+ border-radius: 50px;
+ border: 0;
+ background-color: white;
+ box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+ letter-spacing: 1.5px;
+ text-transform: uppercase;
+ font-size: 15px;
+ transition: all .5s ease;
+ position: fixed;
+ bottom: 20px;
+}
+
+button:hover {
+ letter-spacing: 3px;
+ background-color: hsl(261deg 80% 48%);
+ color: hsl(0, 0%, 100%);
+ box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+ letter-spacing: 3px;
+ background-color: hsl(261deg 80% 48%);
+ color: hsl(0, 0%, 100%);
+ box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+ transform: translateY(10px);
+ transition: 100ms;
+}
+</style>
+<body style='margin:0px;display:flex;flex-direction:column;background-color:rgb(22, 7, 49);color:white;height:100vh;justify-content: center;align-items:center;'>
+    
+    <img id="img" style="display:none; margin:10px;max-width: 300px;" width="80%" src="https://image.cachorrogato.com.br/thumb/1200/630/1/imagens/original/imagem858.jpg"/>
+    <button onclick="test()"> Gerar Cachorrinhos
+    </button>
+</body>
+<script>
+    function test(){
+        document.getElementById('img').style.display = 'block';
+
+        var num = Math.floor(Math.random() * 6) + 1
+
+        switch (num) {
+            case 1:
+                document.getElementById('img').src='https://v5j9q4b5.rocketcdn.me/wp-content/uploads/2021/12/20-cachorrinhos-mais-fofos-do-mundo-1.jpg'
+                break;
+            case 2:
+                document.getElementById('img').src='https://cdn.decoraonline.com.br/media/catalog/product/Q/D/QDPSPC___thumbnail.jpg?width=700&height=700&store=default&image-type=image'
+                break;
+            case 3:
+                document.getElementById('img').src='https://i.pinimg.com/474x/fa/f1/73/faf173ff05d3111d44fd2923ff7713b8.jpg'
+                break;
+            case 4:
+                document.getElementById('img').src='https://ecrie.com.br/sistema/conteudos/imagem/m_38_0_1_31102022154403.jfif'
+                break;
+            case 5:
+                document.getElementById('img').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNZiXaQbkgpf6aFA43F94-f4iw-14dLwD5MQ&usqp=CAU'
+                break;
+            case 6:
+                document.getElementById('img').src='https://static1.purebreak.com.br/articles/1/18/99/1/@/95740-cachorro-mais-fofo-que-esse-114x114-2.jpg'
+                break;
+            
+            default:
+            document.getElementById('img').src='https://v5j9q4b5.rocketcdn.me/wp-content/uploads/2021/12/20-cachorrinhos-mais-fofos-do-mundo-1.jpg'
+
+                break;
+        }
+    }
+</script>
+</html>
